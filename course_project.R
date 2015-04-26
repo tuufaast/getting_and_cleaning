@@ -1,5 +1,5 @@
-##change this to your directory having the data and code
-setwd("C:/Users/Kipa/Desktop/kurssit/getting_and_cleaning")
+##change this to your directory having the data extracted and the code
+setwd("CHANGE_THIS_TO_YOUR_WORKING_DIRECTORY")
 
 #load in features and labels
 features=read.table("UCI HAR Dataset/features.txt", stringsAsFactors=FALSE)
@@ -54,3 +54,7 @@ helpMatrix=data %>%
 
 #create a data frame
 tidydata=as.data.frame(helpMatrix)
+
+#write to a file
+
+write.table(tidydata, file="tidydata.txt",  row.names=FALSE, quote=FALSE)
